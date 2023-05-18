@@ -23,7 +23,7 @@ namespace BlazorApp1.Services
         {
             try
             {
-                var result = await _dbservice.Insert<int>("INSERT INTO public.orders (orderid,ordername,orderdetails) VALUES (@orderid,@ordername,@orderdetails)", orders);
+                var result = await _dbservice.Insert<int>("INSERT INTO public.orders (ordername,orderdetails) VALUES (@ordername,@orderdetails)", orders);
                 return true;
             }
             catch (Exception ex)
